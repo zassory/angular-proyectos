@@ -1,0 +1,10 @@
+<h1>Buscando: <small> {{ termino }}</small></h1>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="robots.length ==0">
+    <div class="alert alert-info" role="alert">
+        No rexisten resultados con el termino: {{ termino }}
+    </div>
+</div>
+<div class="card-columns">
+    <app-robot-tarjeta [robot]="foo" [index]="foo.idx" *ngFor="let foo of robots"></app-robot-tarjeta>
+</div>

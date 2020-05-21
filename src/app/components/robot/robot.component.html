@@ -1,0 +1,25 @@
+<h1 class="animated fadeIn">{{ robot.nombre | uppercase }} <small>{{ robot.aparicion }} <h2>({{ robot.fecha}})</h2></small></h1>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="robot.img" class="img-fluid" alt="robot.nombre">
+        <br><br>
+        <a [routerLink]="['/robots']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{ robot.nombre }}</h3>
+        <hr>
+        <p>
+            {{ robot.bio }}
+            
+        </p>
+    </div>
+    <div>
+        <img *ngIf="robot.elemento == 'Electricidad'" class="img-logo" src="assets/img/electricidad.png">
+        <img *ngIf="robot.elemento == 'Agua'" class="img-logo" src="assets/img/agua.png">
+        <img *ngIf="robot.elemento == 'Fuego'" class="img-logo" src="assets/img/fuego.png">
+        <img *ngIf="robot.elemento == 'Terrestre'" class="img-logo" src="assets/img/tierra.png">
+        <img *ngIf="robot.elemento == 'Aire'" class="img-logo" src="assets/img/aire.png">
+    </div>
+
+</div>
